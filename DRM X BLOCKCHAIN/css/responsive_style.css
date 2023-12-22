@@ -1,0 +1,296 @@
+:root {
+    --primary-color: #00b4d8;
+    --secondary-color: #0077b6;
+    --dark-color: #003554;
+    --light-color: #cce3de;
+}
+
+/* import some fonts  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* font  */
+    font-family: 'Raleway', sans-serif;
+
+    color: #333;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 10px 0px;
+
+}
+
+p {
+    margin: 10px 0px;
+
+}
+
+img {
+    width: 100%;
+
+}
+
+/* Showcase  */
+
+.showcase {
+    height: 450px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.showcase h1 {
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.showcase p {
+    font-size: 17px;
+    margin: 20px 0px;
+}
+
+.showcase a {
+    color: #fff;
+    padding: 10px 5px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+
+.showcase a:hover {
+
+    box-shadow: 0 10px 14px #0000006c;
+    margin: 2.5px;
+    transition: all 0.5s ease-in;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 60% 30%;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 360px;
+    width: 380px;
+    z-index: 100;
+
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.btn-primary {
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* stats */
+.stats {
+    margin-top: 50px;
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00b4d8;
+}
+
+
+/*  Navbar  */
+.navbar {
+    background-color: var(--primary-color);
+    height: 70px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    margin: 0px 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px white solid;
+}
+
+/*  Cli */
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid>*:first-child {
+    /* this means anything tthe first element we style   */
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+
+}
+
+/* Cloud */
+
+
+.grid .btn-dark {
+    padding: 10px 25px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.grid .btn-dark:hover {
+
+    box-shadow: 0 10px 14px #0000006c;
+    margin: 3.5px;
+    transition: all 0.5s ease-out;
+}
+
+.text-center .lg {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+}
+
+/* Languages */
+
+
+
+.language .flex {
+
+    flex-wrap: wrap;
+
+}
+
+
+.language .card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
+    margin: 20px 15px 40px 0;
+    transition: transform 0.2s ease-in;
+}
+
+.language .card:nth-child(6) {
+    font-size: 10px;
+
+}
+
+.language .card h4 {
+
+    margin-bottom: 20px;
+}
+
+.language .card:hover {
+    transform: translateY(-15px)
+}
+
+
+
+/* Footer */
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+
+/* tablets and under */
+@media(max-width:768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid>*:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+
+
+/* Mobile */
+@media(max-width:500px) {
+    .navbar {
+        height: 110px;
+        ;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
